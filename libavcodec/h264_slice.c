@@ -1722,7 +1722,7 @@ static int h264_slice_header_parse(const H264Context *h, H264SliceContext *sl,
     }
     if (!h->ps.pps_list[sl->pps_id]) {
         av_log(h->avctx, AV_LOG_ERROR,
-               "non-existing PPS %u referenced\n",
+               "non-existing PPS %u referenced in h264_slice_header_parse()\n",
                sl->pps_id);
         return AVERROR_INVALIDDATA;
     }
